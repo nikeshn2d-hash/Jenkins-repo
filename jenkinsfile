@@ -2,24 +2,23 @@ pipeline {
     agent any
 
     stages {
-
         stage('Build') {
             steps {
-                echo "stage-1"
+                echo "Running Python script"
+                sh 'python3 print.py'
             }
         }
 
         stage('Test') {
             steps {
-                echo "stage-2"
+                echo "Test Stage"
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "stage-3"
+                echo "Deploy Stage"
             }
         }
-
     }
 }
